@@ -14,7 +14,7 @@
 
 <body class="bg-body text-black font-inter pb-6 hyphens:auto">
 
-    <header class="pt-2  md:pt-6 lg::pt-12">
+    <header class="pt-2 sm:pt-6 md:pt-12">
         <nav class=" flex justify-between mx-auto px-2">
             <div>
             <a class="text-2xl md:text-5xl lg:text-6xl px-2" href="index.html">Confront</a>
@@ -26,34 +26,86 @@
             </div> 
         </nav>    
     </header>
-<div class="px-2 py-2 sm:py-6 md:py-18 justify-between mx-auto space-y-2">
-    <h1 class="py-2 px-2 md:space-y-2 text-left text-2xl md:text-5xl lg:text-6xl  " href="Portes Ouvertes.html"> Portes Ouvertes </h1>
+
+ <div class="flex px-2 py-4 sm:py-12 md:py-18 justify-between mx-auto space-y-2">
+    <h1 class="py-2 px-2 sm:space-y-2 text-left text-2xl md:text-5xl lg:text-6xl  " href="Portes Ouvertes.html"> Portes Ouvertes </h1>
+
+    <Div class="block sm:hidden">
+    <button onclick="prev()" class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="minus"> 
+        <svg class="w-6 h-8" viewBox="0 0 21 23" fill="grey-100" hover:fill="grey-100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.4375 12.75L20.5625 23V19L5.125 11.5625L5.25 11.8125V11.1875L5.125 11.4375L20.5625 4V-7.15256e-07L0.4375 10.25V12.75Z"/>
+        </svg>
+    </button>
+
+    <button onclick="next()"class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="plus">
+        <svg  class="w-6 h-8" viewBox="0 0 21 23 " xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5625 12.75L0.4375 23V19L15.875 11.5625L15.75 11.8125V11.1875L15.875 11.4375L0.4375 4V-7.15256e-07L20.5625 10.25V12.75Z"/>
+        </svg>
+    </button>
+</Div>
+
 </div>
 
 <section class="px-2 md:gap-x-2 lg:gap-x-4 lg:flex-row flex w-full lg:w-5/6 content-start">
                                                      <!--- HÄRRRRRRR!!!! --->
 
-<div class="px-2 space-y-2 hidden lg:block lg:w-1/6"> 
+<div class="px-2 space-y-2 hidden sm:block lg:w-1/6"> 
             
-                <h2 class="align-top text-left text-lg sm:text-2xl ">From loud secret to silent opening</h2>
+    <div>
+                <h2 class="align-top text-left text-lg md:text-2xl ">From loud secret to silent opening</h2>
                 <ul class="font-normal list-none py-4 text-xs sm:text-sm">  <!--- page 1 --->
                     <li>Europan 16</li>
                     <li>With Gilles Caron and Pauline Delorme</li> 
                     <li>Namur, Belgium </li> 
                     <li>2021</li>
                      </ul> 
-            
+         </div>
 
+                     <div class="">        
+                        <div class=" ">
+            
+                            <div class="flex justify-start gap-2">
+                                        
+                            <button onclick="prev()" class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="minus"> 
+                                <svg class="w-8 h-10" viewBox="0 0 21 23" fill="grey-100" hover:fill="grey-100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.4375 12.75L20.5625 23V19L5.125 11.5625L5.25 11.8125V11.1875L5.125 11.4375L20.5625 4V-7.15256e-07L0.4375 10.25V12.75Z"/>
+                                </svg>
+                            </button>
+                            
+                            
+                            <div class="flex justify-items-stretch 2-px">
+                            <button class=" page-item hidden" data-index="0">1/6</button>
+                            <button class=" page-item hidden" data-index="1">2/6</button>
+                            <button class=" page-item hidden" data-index="2">3/6</button>
+                            <button class=" page-item hidden" data-index="3">4/6</button>
+                            <button class=" page-item hidden" data-index="4">5/6</button>
+                            <button class=" page-item hidden" data-index="5">6/6</button>
+                          
+            
+                        </div>
+                            
+                            <button onclick="next()"class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="plus">
+                                <svg  class="w-8 h-10" viewBox="0 0 21 23 " xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5625 12.75L0.4375 23V19L15.875 11.5625L15.75 11.8125V11.1875L15.875 11.4375L0.4375 4V-7.15256e-07L20.5625 10.25V12.75Z"/>
+                                </svg>
+                            </button>
+            
+                             </div>
+            
+                        </div>
+            
+                    </div>
 </div>
 
-<div class="lg:px-2 content-between w-full lg:w-5/6">
+
+<div class="l:px-2 content-between w-full lg:w-5/6">
 
             <ol id="slider" class="">
             
                 <ol class=""  data-index="0">
-                    <div class="px-2 w-full flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <div class="px-2 w-full md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                      
-                        <p class="w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
+                        <p class="w-full md:w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
                         Situated between the territorial structures of the river Meuse,
                         the railway and the departmental road, the abandoned military 
                         site of Sart Hulet turns away from the activities of the rest 
@@ -67,7 +119,7 @@
                         character to the world. It is a secret and everyone knows it. 
                     </p>
 
-                    <p class="text-left leading-relaxed w-1/2 break-words font-normal text-sm sm:text-base md:text-lg ">
+                    <p class=" w-full md:w-1/2 text-left leading-relaxed  break-words font-normal text-sm sm:text-base md:text-lg ">
                         Portes Ouvertes proposes to valorize the existing "mystery capital"
                         accumulated on the site, opposing the approach of the municipality 
                         suggesting to transform the site into a recreational  space reminiscent 
@@ -79,8 +131,8 @@
                 </ol>
 
                 <ol class=" hidden " data-index="1">
-                    <div class="px-2 w-full flex flex-row gap-x-16 justify-between">
-                    <p class="w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
+                    <div class="px-2 w-full md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <p class="w-full md:w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
                     Starting from this opening, a calendar divides the appropriation into six concrete actions: opening, await, 
                     observation, accompaniment, inhabitation and extrapolation. These are translated into spatialities and gestures
                      on the site like unlocking the doors, terrain vague, uses, territory and strategy. A series of representations 
@@ -88,11 +140,11 @@
                      inhabited by a crowd of diverse protagonists, bring together uses that take place in the different temporalities 
                      of the calendar. A staging that embraces the diversity and complexity of potential experiences.</p>
                      
-                     <p class="w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
+                     <p class="w-full md:w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
                      Open doors means offering almost nothing so that a lot can change. It means upholding a critical position
                          vis-à-vis the master plan as a “neutral” tool to conceive a project on the urban scale. It means avoiding to
                          speak in terms of programs, activities or sectors but rather of uses, experiences and territories. 
-                         It means widening the biodiversity of the site by acknowledging that life is a flux of changes.>
+                         It means widening the biodiversity of the site by acknowledging that life is a flux of changes.
                     </p>
                     </div>
                 </ol>
@@ -137,58 +189,58 @@
                 </ol> //-->
 
                 <ol class=" hidden" data-index="2"> 
-                    <div class="px-2 w-full flex flex-row gap-x-16 justify-between">
-                    <div class="w-1/2 ">
+                    <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <div class=" h-1/2 md:w-1/2">
                      <img class="flex-auto" src="img/Portes Ouvertes/1_.jpg" alt="Barbed wire fence"> <!--- page 4 --->
-                        <li class="font-normal list-none py-4 text-xs sm:text-sm">Barbed wire fence</li>
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Barbed wire fence</li>
                     </div>
                     
-                    <div class="w-1/2">
+                    <div class=" h-1/2 md:w-1/2">
                                  <img class="flex-auto" src="img/Portes Ouvertes/2_.jpg" alt="Terra incognita"> 
-                                 <li class="font-normal list-none py-4 text-xs sm:text-sm">Terra incognita</li> <!--- page 5 --->
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Terra incognita</li> <!--- page 5 --->
                          </div>
                         </div>
                   </ol>
 
 
                   <ol class=" hidden" data-index="3"> 
-                    <div class="px-2 w-full flex flex-row gap-x-16 justify-between">
-                    <div class="w-1/2 ">
+                    <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <div class=" h-1/2 md:w-1/2">
                      <img class="flex-auto" src="img/Portes Ouvertes/3_.jpg" alt="A crowd of diverse protagonists I"> <!--- page 4 --->
-                        <li class="font-normal list-none py-4 text-xs sm:text-sm">A crowd of diverse protagonists I</li>
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">A crowd of diverse protagonists I</li>
                     </div>
                     
-                    <div class="w-1/2">
+                    <div class="h-1/2 md:w-1/2">
                                  <img class="flex-auto" src="img/Portes Ouvertes/4_.jpg" alt="A crowd of diverse protagonists II"> 
-                                 <li class="font-normal list-none py-4 text-xs sm:text-sm">A crowd of diverse protagonists II</li> <!--- page 5 --->
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">A crowd of diverse protagonists II</li> <!--- page 5 --->
                          </div>
                         </div>
                   </ol>
 
                   <ol class=" hidden" data-index="4"> 
-                    <div class="px-2 w-full flex flex-row gap-x-16 justify-between">
-                    <div class="w-1/2 ">
+                  <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <div class=" h-1/2 md:w-1/2 ">
                      <img class="flex-auto" src="img/Portes Ouvertes/5_.jpg" alt="A crowd of diverse protagonists III"> <!--- page 4 --->
-                        <li class="font-normal list-none py-4 text-xs sm:text-sm">A crowd of diverse protagonists III</li>
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4  text-xs sm:text-sm">A crowd of diverse protagonists III</li>
                     </div>
                     
-                    <div class="w-1/2">
+                    <div class=" h-1/2 md:w-1/2">
                                  <img class="flex-auto" src="img/Portes Ouvertes/6_.jpg" alt="life as a flux of changes"> 
-                                 <li class="font-normal list-none py-4 text-xs sm:text-sm">Life as a flux of changes</li> <!--- page 5 --->
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Life as a flux of changes</li> <!--- page 5 --->
                          </div>
                         </div>
                   </ol>
 
                   <ol class=" hidden" data-index="5">
-                    <div class="px-2 w-full flex flex-row gap-x-16 justify-between">
-                  <div class="w-1/2 ">
+                   <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                  <div class=" h-1/2 md:w-1/2">
                     <img class="flex-auto" src="img/Portes Ouvertes/3_project.jpg" alt="Region II"> <!--- page 4 --->
-                       <li class="font-normal list-none py-4 text-xs sm:text-sm">From the distance</li>
+                       <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">From the distance</li>
                    </div>
                    
-                   <div class="w-1/2">
+                   <div class=" h-1/2 md:w-1/2">
                                 <img class="flex-auto" src="img/Portes Ouvertes/4_calendrier.pdf" alt="calendar"> 
-                                <li class="font-normal list-none py-4 text-xs sm:text-sm">Calendar</li> <!--- page 5 --->
+                                <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Calendar</li> <!--- page 5 --->
                         </div>
                        </div>
                  </ol>
@@ -196,14 +248,14 @@
             
         </div>
 
-            <div>        
+             <!--  <div>        
             <div class=" absolute bottom-4 right-2 sm:bottom-32 sm:right-4 ">
 
                 <div class="flex justify-between space-x-2">
                             
-                <button onclick="prev()" class="cursor-pointer hover:bg-gray-100 rounded page-control" data-action="minus"> 
-                    <svg width="30" height="53" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.4375 12.75L20.5625 23V19L5.125 11.5625L5.25 11.8125V11.1875L5.125 11.4375L20.5625 4V-7.15256e-07L0.4375 10.25V12.75Z" fill="black"/>
+                <button onclick="prev()" class="cursor-pointer hover:bg-gray-100 page-control px-2" data-action="minus"> 
+                    <svg class="w-8 h-10" viewBox="0 0 21 23" fill="grey-100" hover:fill="grey-100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.4375 12.75L20.5625 23V19L5.125 11.5625L5.25 11.8125V11.1875L5.125 11.4375L20.5625 4V-7.15256e-07L0.4375 10.25V12.75Z"/>
                     </svg>
                 </button>
                 
@@ -215,13 +267,12 @@
                 <button class="rounded page-item hidden" data-index="4">5/6</button>
                 <button class="rounded page-item hidden" data-index="5">6/6</button>
               
-               
 
             </div>
                 
-                <button onclick="next()"class="cursor-pointer hover:bg-gray-100 rounded page-control" data-action="plus">
-                    <svg width="30" height="53" viewBox="0 0 21 23 " fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.5625 12.75L0.4375 23V19L15.875 11.5625L15.75 11.8125V11.1875L15.875 11.4375L0.4375 4V-7.15256e-07L20.5625 10.25V12.75Z" fill="black"/>
+                <button onclick="next()"class="cursor-pointer hover:bg-gray-100 page-control px-2" data-action="plus">
+                    <svg  class="w-8 h-10" viewBox="0 0 21 23 " xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5625 12.75L0.4375 23V19L15.875 11.5625L15.75 11.8125V11.1875L15.875 11.4375L0.4375 4V-7.15256e-07L20.5625 10.25V12.75Z"/>
                     </svg>
                 </button>
 
@@ -229,7 +280,7 @@
 
             </div>
 
-        </div>
+        </div>  //-->
                 
            
 
@@ -301,12 +352,12 @@ function showSlide(){
 
         function makeActive(el){
             el.classList.add( 'text-gray-800')
-            el.classList.remove('hover:bg-gray-100', 'hidden')
+            el.classList.remove('hover:bg-gray-100', 'hidden', 'hover:grey-100')
         }
 
         function makeInactive(el){
             el.classList.remove( 'text-gray-800')
-            el.classList.add('hover:bg-gray-100', 'hidden')
+            el.classList.add('hover:bg-gray-100', 'hidden', 'hover:grey-100')
         }
 
 
