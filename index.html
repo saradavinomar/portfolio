@@ -12,49 +12,50 @@
 </head>
 <body class="bg-body text-black font-inter pb-6">
 
-    <header class="pt-12">
+    <header class="pt-2 sm:pt-6 md:pt-12">
         <nav class=" flex justify-between mx-auto px-2">
             <h1>
-            <a class="text-2xl md:text-5xl lg:text-6xl px-2" href="index.html">Confront</a>
+            <a class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2" href="index.html">Confront</a>
             </h1> 
 
-            <h2 class="flex justify-between  gap-0 sm:gap-x-12">
-            <a class="text-2xl md:text-5xl lg:text-6xl  px-2" href="#">About</a>
-            <a class="text-2xl md:text-5xl lg:text-6xl  px-2" href="#">Contact</a>
+            <h2 class="flex justify-between gap-0 sm:gap-x-12 ">
+            <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl  px-2" href="About.html">About</a>
+            <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl  px-2 mailto-link" mailto-link href="mailto:s.davinomar@gmail.com">Contact</a>
+
+        
             </h2> 
         </nav>    
     </header>
 
-        <section class=" py-6 sm:py-12 md:py-24 justify-between items-center mx-auto px-2">
-            <ul class="px-2 space-y-2">
+        <section class="py-4 sm:py-12 md:py-18 justify-between items-center mx-auto px-2">
+            <ul class="px-2">
 
-
-                <li class="sm:py-2">
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="Out of Control When I Turn My Power On.html">Out of Control When I Turn My Power On</a>
+                <li class="py-2">
+                    <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Portes Ouvertes.html">Portes Ouvertes</a>
                 </li>
 
-                <li class="sm:py-2">
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="Portes Ouvertes.html">Portes Ouvertes</a>
+                <li class="py-2">
+                    <a class=" cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Out of Control When I Turn My Power On.html">Out of Control When I Turn My Power On</a>
                 </li>
 
-                <li >
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="#">An Autonomous Form for the labor of Love</a>
+                <li class="py-2">
+                    <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="An Autonomous Form for the Labor of Love.html">An Autonomous Form for the labor of Love</a>
+                </li>
+                <li class="py-2">
+                    <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Communal Tower.html">Communal Tower</a>
                 </li>
                 
                 <li class="py-2">
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="#">Communal tower</a>
+                    
+                    <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Brutus.html">Brutus</a>
                 </li>
 
                 <li class="py-2">
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="#">Brutus</a>
-                </li>
-
-                <li class="py-2">
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="#">Off the Grid</a>
+                    <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Off the Grid.html">Off the Grid</a>
                 </li>
                 
                 <li class="py-2">
-                    <a class="text-2xl md:text-5xl lg:text-6xl" href="#">Staketet</a>
+                    <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Staketet.html">Staketet</a>
                 </li>
             </ul>
 
@@ -62,8 +63,49 @@
         </section>
 
 
-   
+   <script>
+    $(document).ready(function() {
+	
+	// Add class to mailto link
+	// Needed to separate the disabling of the default action AND copy email to clipboard
+	$('a[href^=mailto]').addClass('mailto-link');
 
+	var mailto = $('.mailto-link');
+	var messageCopy = 'Click to copy email address';
+	var messageSuccess = 'Email address copied to clipboard';
+	
+	mailto.append('<span class="mailto-message"></span>');
+	$('.mailto-message').append(messageCopy);
+	
+	// Disable opening your email client. yuk.
+	$('a[href^=mailto]').click(function() {
+		return false; 
+	})
+	
+	// On click, get href and remove 'mailto:' from value
+	// Store email address in a variable.
+	mailto.click(function() {
+		var href = $(this).attr('href');
+		var email = href.replace('mailto:', '');
+		copyToClipboard(email);
+		$('.mailto-message').empty().append(messageSuccess);
+		setTimeout(function() {
+			$('.mailto-message').empty().append(messageCopy);}, 2000); 
+	});
+	
+});
+
+// Grabbed this from Stack Overflow.
+// Copies the email variable to clipboard
+function copyToClipboard(text) {
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', text);
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+}
+   </script>
 
 </body>
 </html>
