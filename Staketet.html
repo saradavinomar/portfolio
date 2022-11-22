@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confront</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet"
+    >
+</head>
+
+<body class="bg-body text-black font-inter pb-6">
+
+    <header class="pt-2 sm:pt-6 md:pt-12">
+        <nav class=" flex justify-between mx-auto px-2">
+            <h1>
+            <a class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2" href="index.html">Confront</a>
+            </h1> 
+
+            <h2 class="flex justify-between gap-0 sm:gap-x-12 ">
+            <a class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl  px-2" href="About.html">About</a>
+            <button id="copy-text-btn" class="cursor-pointer text-2xl sm:text-4xl md:text-5xl lg:text-6xl  px-2" href="s.davinomar@gmail.com">Contact</button>
+    
+         <p id="copy-text" class="hidden">s.davinomar@gmail.com</p>
+    
+            </h2> 
+        </nav>    
+    </header>
+
+
+ <div class="flex px-2 py-4 sm:py-12 md:py-18 justify-between mx-auto space-y-2">
+    <h1 class="py-2 px-2 sm:space-y-2 text-left text-2xl sm:text-4xl md:text-5xl lg:text-6xl" href="Staketet.html"> Staketet </h1>
+
+    <Div class="flex px-2 sm:hidden ">
+    <button onclick="prev()" class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="minus"> 
+        <svg class="w-6 h-8" viewBox="0 0 21 23" fill="grey-100" hover:fill="grey-100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.4375 12.75L20.5625 23V19L5.125 11.5625L5.25 11.8125V11.1875L5.125 11.4375L20.5625 4V-7.15256e-07L0.4375 10.25V12.75Z"/>
+        </svg>
+    </button>
+
+    <button onclick="next()"class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="plus">
+        <svg  class="w-6 h-8" viewBox="0 0 21 23 " xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5625 12.75L0.4375 23V19L15.875 11.5625L15.75 11.8125V11.1875L15.875 11.4375L0.4375 4V-7.15256e-07L20.5625 10.25V12.75Z"/>
+        </svg>
+    </button>
+</Div>
+
+</div>
+
+<section class="px-2 md:gap-x-2 lg:gap-x-4 lg:flex-row flex w-full lg:w-5/6 content-start">
+                                                     <!--- HÄRRRRRRR!!!! --->
+
+<div class="px-2 space-y-2 hidden sm:block lg:w-1/6"> 
+            
+    <div>
+        <!--<h2 class="align-top text-left text-lg md:text-2xl "></h2> -->
+                <ul class="font-normal list-none py-4 text-xs sm:text-sm">  <!--- page 1 --->
+                    <li>Bo2030 Competition </li>
+                    <li>With Emil Kedbrant and Felicia Liang</li> 
+                    <li>Sweden</li>
+                    <li>2016</li> 
+                     </ul> 
+         </div>
+
+                     <div class="">        
+                        <div class=" ">
+            
+                            <div class="flex justify-start gap-2">
+                                        
+                            <button onclick="prev()" class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="minus"> 
+                                <svg class="w-8 h-10" viewBox="0 0 21 23" fill="grey-100" hover:fill="grey-100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.4375 12.75L20.5625 23V19L5.125 11.5625L5.25 11.8125V11.1875L5.125 11.4375L20.5625 4V-7.15256e-07L0.4375 10.25V12.75Z"/>
+                                </svg>
+                            </button>
+                            
+                            
+                            <div class="flex justify-items-stretch 2-px">
+                            <button class=" page-item hidden" data-index="0">1/3</button>
+                            <button class=" page-item hidden" data-index="1">2/3</button>
+                            <button class=" page-item hidden" data-index="2">3/3</button>
+                            
+                            
+                          
+            
+                        </div>
+                            
+                            <button onclick="next()"class="cursor-pointer hover:bg-gray-50 page-control p-2" data-action="plus">
+                                <svg  class="w-8 h-10" viewBox="0 0 21 23 " xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5625 12.75L0.4375 23V19L15.875 11.5625L15.75 11.8125V11.1875L15.875 11.4375L0.4375 4V-7.15256e-07L20.5625 10.25V12.75Z"/>
+                                </svg>
+                            </button>
+            
+                             </div>
+            
+                        </div>
+            
+                    </div>
+</div>
+
+
+<div class="px-2 content-between w-full lg:w-5/6">
+
+            <ol id="slider" class="">
+            
+                <ol class=""  data-index="0">
+                    <div class="px-2 w-full md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                     
+                        <p class="w-full md:w-1/2 text-left leading-relaxed break-words font-normal text-sm sm:text-base md:text-lg ">
+                    Based on existing legislations of densification, Staketet is a strategy for increasing the housing stock in 
+                    residential areas in Sweden. Today, landowners may erect a detached building in the vicinity of the main residential
+                    building without building permission. The addition may reach a maximum of 25 square meters and 4 meters of height.
+                    The distance to the neighboring plot must be at least 4.5 meters unless the affected owners allow a shorter distance.
+
+
+                        
+                    </p>
+
+                    <p class=" py-2 md:py-0 w-full md:w-1/2 text-left leading-relaxed  break-words font-normal text-sm sm:text-base md:text-lg ">
+                    A proposed update of this could result in permanent housing materializing the “untouchable” area surrounding each 
+                    boundary, 4.5 meters in depth per plot. With this logic, strips of 9 meters can be built between the houses. 
+                    This opens up for the reproduction of the “innocent” archetype of the fence as a method of creating subtlety 
+                    towards adjacent homes.
+                    </p>
+                </div>
+                </ol>
+
+                <ol class=" hidden" data-index="1"> 
+                    <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <div class=" h-1/2 md:w-1/2">
+                     <img class="flex-auto" src="img/Staketet/Bild/1_bild.jpg" alt="The fence 01"> <!--- page 4 --->
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">The fence 01</li>
+                    </div>
+                    
+                    <div class=" h-1/2 md:w-1/2">
+                                 <img class="flex-auto" src="img/Staketet/Bild/2_bild.jpg" alt="The fence 02"> 
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">the fence 02</li> <!--- page 5 --->
+                         </div>
+                        </div>
+                  </ol>
+
+
+                  <ol class=" hidden" data-index="2"> 
+                    <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
+                    <div class=" h-1/2 md:w-1/2">
+                     <img class="flex-auto" src="img/Staketet/Ritning/1_Ritning.jpg" alt="Blueprint 01"> <!--- page 4 --->
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Blueprint 01</li>
+                    </div>
+                    
+                    <div class="h-1/2 md:w-1/2">
+                                 <img class="flex-auto" src="img/Staketet/Ritning/2_Ritning.jpg" alt="Blueprint 02"> 
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Blueprint 02</li> <!--- page 5 --->
+                         </div>
+                        </div>
+                  </ol>
+
+
+            </ol>
+            
+        </div>
+
+            
+        </section>
+
+      <script>
+
+        currentSlideID = 1;
+sliderElement =  document.getElementById('slider');
+totalSlides = sliderElement.childElementCount;
+
+function next(){
+    if(currentSlideID<totalSlides) {
+        currentSlideID++;
+        showSlide()
+    }
+    
+}
+
+function prev(){
+
+    if(currentSlideID>1) {      
+        currentSlideID--;
+        showSlide()
+    }
+}
+
+function showSlide(){
+    slides = document.getElementById('slider').getElementsByTagName('ol')
+    for (let index = 0; index < totalSlides; index++) {
+        const element = slides [index] ;
+        if(currentSlideID===index+1) {
+            element.classList.remove ('hidden')
+        }else{
+            element.classList.add ('hidden')
+        }
+    }
+}
+        window.addEventListener('DOMContentLoaded', () => {
+            const pageItems = document.querySelectorAll('.page-item')
+            const pageControls = document.querySelectorAll('.page-control')
+            let activeIdx = 0;
+            makeActive(pageItems[activeIdx]) 
+            
+            pageItems.forEach(el => {
+                el.addEventListener('click', (event) => {
+                    makeInactive(pageItems[activeIdx])
+                    activeIdx = Number(event.target.dataset.index)
+                    makeActive(pageItems[activeIdx]) 
+                })
+            })
+
+            pageControls.forEach(el => {
+                el.addEventListener('click', (event) => {
+                    const diff = el.dataset.action==='plus'? +1: -1;
+                    const newIdx = activeIdx + diff;
+                    
+                    if((newIdx >= pageItems.length) || (newIdx < 0)) return;
+                    
+                    makeInactive(pageItems[activeIdx])
+                    makeActive(pageItems[newIdx]);
+                    activeIdx = newIdx
+                })
+            })
+        })
+
+        function makeActive(el){
+            el.classList.add( 'text-gray-800')
+            el.classList.remove('hover:bg-gray-100', 'hidden', 'hover:grey-100')
+        }
+
+        function makeInactive(el){
+            el.classList.remove( 'text-gray-800')
+            el.classList.add('hover:bg-gray-100', 'hidden', 'hover:grey-100')
+        }
+
+
+ document.getElementById('copy-text-btn').onclick = function() {
+	const _this = this 
+	navigator.clipboard.writeText(document.getElementById('copy-text').innerText) 
+
+	.then (function(){
+
+		let toast = document.querySelector('.toast')
+		toast = document.getElementById ('toast') 
+		_this.innerText = ('Email copied')
+		
+	setTimeout(function(){
+		_this.innerText = 'Contact'
+	},1500)
+
+})}
+
+
+
+      </script>
+
+
+
+
+</body>
+</html>
