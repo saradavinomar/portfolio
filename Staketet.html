@@ -170,6 +170,7 @@
 sliderElement =  document.getElementById('slider');
 totalSlides = sliderElement.childElementCount;
 
+
 function next(){
     if(currentSlideID<totalSlides) {
         currentSlideID++;
@@ -185,6 +186,18 @@ function prev(){
         showSlide()
     }
 }
+document.onkeydown = (e)=>{ switch(e.keyCode){
+    case 37: // left
+      prev();
+      break;
+      showSlide()
+    case 39: // right
+      next()
+      break;
+      showSlide()
+  }
+};
+
 
 function showSlide(){
     slides = document.getElementById('slider').getElementsByTagName('ol')
@@ -222,8 +235,13 @@ function showSlide(){
                     makeActive(pageItems[newIdx]);
                     activeIdx = newIdx
                 })
+                
             })
+
         })
+
+
+
 
         function makeActive(el){
             el.classList.add( 'text-gray-800')

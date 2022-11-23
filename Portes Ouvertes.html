@@ -221,6 +221,18 @@
 sliderElement =  document.getElementById('slider');
 totalSlides = sliderElement.childElementCount;
 
+document.onkeydown = (e)=>{ switch(e.keyCode){
+    case 37: // left
+      prev();
+      break;
+      showSlide()
+    case 39: // right
+      next()
+      break;
+      showSlide()
+  }
+};
+
 function next(){
     if(currentSlideID<totalSlides) {
         currentSlideID++;

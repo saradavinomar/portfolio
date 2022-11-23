@@ -216,6 +216,18 @@ function prev(){
     }
 }
 
+document.onkeydown = (e)=>{ switch(e.keyCode){
+    case 37: // left
+      prev();
+      break;
+      showSlide()
+    case 39: // right
+      next()
+      break;
+      showSlide()
+  }
+};
+
 function showSlide(){
     slides = document.getElementById('slider').getElementsByTagName('ol')
     for (let index = 0; index < totalSlides; index++) {
