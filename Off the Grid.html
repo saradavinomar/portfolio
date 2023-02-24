@@ -17,7 +17,7 @@
     <header class="pt-2 sm:pt-6 md:pt-12">
         <nav class=" flex justify-between mx-auto px-2">
             <h1>
-            <a class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2" href="index.html">Confront</a>
+            <a class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2 italic" href="index.html">Confront</a>
             </h1> 
 
             <h2 class="flex justify-between gap-0 sm:gap-x-12 ">
@@ -137,13 +137,13 @@
                 <ol class=" hidden" data-index="1"> 
                     <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                     <div class=" h-1/2 md:w-1/2">
-                     <img class="flex-auto" src="img/Off the Grid/Bild/1.jpg" alt="Book Cover"> <!--- page 4 --->
-                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Book Cover</li>
+                     <img class="flex-auto" rel="preload" src="img/Off the Grid/Bild/1.jpg" alt=""> <!--- page 4 --->
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm"></li>
                     </div>
                     
                     <div class=" h-1/2 md:w-1/2">
-                                 <img class="flex-auto" src="img/Off the Grid/Bild/2.jpg" alt="Page 01"> 
-                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Extract 01</li> <!--- page 5 --->
+                                 <img class="flex-auto" rel="preload" src="img/Off the Grid/Bild/2.jpg" alt=""> 
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm"></li> <!--- page 5 --->
                          </div>
                         </div>
                   </ol>
@@ -152,13 +152,13 @@
                   <ol class=" hidden" data-index="2"> 
                     <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                     <div class=" h-1/2 md:w-1/2">
-                     <img class="flex-auto" src="img/Off the Grid/Bild/3.jpg" alt="Page 02"> <!--- page 4 --->
-                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Extract 02</li>
+                     <img class="flex-auto" rel="preload" src="img/Off the Grid/Bild/3.jpg" alt=""> <!--- page 4 --->
+                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm"></li>
                     </div>
                     
                     <div class="h-1/2 md:w-1/2">
-                                 <img class="flex-auto" src="img/Off the Grid/Bild/4.jpg" alt="Page 04"> 
-                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Extract 04</li> <!--- page 5 --->
+                                 <img class="flex-auto" rel="preload" src="img/Off the Grid/Bild/4.jpg" alt=""> 
+                                 <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm"></li> <!--- page 5 --->
                          </div>
                         </div>
                   </ol>
@@ -192,6 +192,18 @@ function prev(){
         showSlide()
     }
 }
+
+document.onkeydown = (e)=>{ switch(e.keyCode){
+    case 37: // left
+      prev();
+      break;
+      showSlide()
+    case 39: // right
+      next()
+      break;
+      showSlide()
+  }
+};
 
 function showSlide(){
     slides = document.getElementById('slider').getElementsByTagName('ol')

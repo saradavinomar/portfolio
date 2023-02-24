@@ -17,7 +17,7 @@
     <header class="pt-2 sm:pt-6 md:pt-12">
         <nav class=" flex justify-between mx-auto px-2">
             <h1>
-            <a class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2" href="index.html">Confront</a>
+            <a class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2 italic" href="index.html">Confront</a>
             </h1> 
 
             <h2 class="flex justify-between gap-0 sm:gap-x-12 ">
@@ -135,12 +135,12 @@
                 <ol class=" hidden" data-index="1"> 
                     <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                     <div class=" h-1/2 md:w-1/2">
-                     <img class="flex-auto" src="img/Communal Tower/Bild/1_CO-WORK_klar.jpg" alt="Co-work"> <!--- page 4 --->
+                     <img class="flex-auto" rel="preload" src="img/Communal Tower/Bild/1_CO-WORK_klar.jpg" alt="Co-work"> <!--- page 4 --->
                         <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Co-work</li>
                     </div>
                     
                     <div class=" h-1/2 md:w-1/2">
-                                 <img class="flex-auto" src="img/Communal Tower/Bild/2_DWELLING_klar.jpg" alt="Dwelling"> 
+                                 <img class="flex-auto" rel="preload" src="img/Communal Tower/Bild/2_DWELLING_klar.jpg" alt="Dwelling"> 
                                  <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Dwelling</li> <!--- page 5 --->
                          </div>
                         </div>
@@ -150,12 +150,12 @@
                   <ol class=" hidden" data-index="2"> 
                     <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                     <div class=" h-1/2 md:w-1/2">
-                     <img class="flex-auto" src="img/Communal Tower/Bild/3_GYM_klar.jpg" alt="Gym"> <!--- page 4 --->
+                     <img class="flex-auto" rel="preload" src="img/Communal Tower/Bild/3_GYM_klar.jpg" alt="Gym"> <!--- page 4 --->
                         <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Gym</li>
                     </div>
                     
                     <div class="h-1/2 md:w-1/2">
-                                 <img class="flex-auto" src="img/Communal Tower/Bild/4_TERRACE.jpg" alt="Terrace"> 
+                                 <img class="flex-auto" rel="preload" src="img/Communal Tower/Bild/4_TERRACE.jpg" alt="Terrace"> 
                                  <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Terrace</li> <!--- page 5 --->
                          </div>
                         </div>
@@ -164,12 +164,12 @@
                   <ol class=" hidden" data-index="3"> 
                   <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                     <div class=" h-1/2 md:w-1/2 ">
-                     <img class="flex-auto" src="img/Communal Tower/Ritning/1_Sitplan_digital.jpeg" alt="Blueprint"> <!--- page 4 --->
+                     <img class="flex-auto" rel="preload" src="img/Communal Tower/Ritning/1_Sitplan_digital.jpeg" alt="Blueprint"> <!--- page 4 --->
                         <li class="font-normal list-none pt-2 pb-4 md:py-4  text-xs sm:text-sm">Blueprint </li>
                     </div>
                     
                     <div class=" h-1/2 md:w-1/2">
-                                 <img class="flex-auto" src="img/Communal Tower/Ritning/2_ritning_office_digital.jpg" alt="Blueprint Office"> 
+                                 <img class="flex-auto" rel="preload" src="img/Communal Tower/Ritning/2_ritning_office_digital.jpg" alt="Blueprint Office"> 
                                  <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Blueprint Office</li> <!--- page 5 --->
                          </div>
                         </div>
@@ -178,7 +178,7 @@
                   <ol class=" hidden" data-index="4">
                    <div class="py-2 sm:py-0 px-2 md:flex flex-row gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-16 justify-between">
                   <div class=" h-1/2 md:w-1/2">
-                    <img class="flex-auto" src="img/Communal Tower/Ritning/3_ritning_bostad_digital.jpg" alt="Blueprint Dwelling"> <!--- page 4 --->
+                    <img class="flex-auto" rel="preload" src="img/Communal Tower/Ritning/3_ritning_bostad_digital.jpg" alt="Blueprint Dwelling"> <!--- page 4 --->
                        <li class="font-normal list-none pt-2 pb-4 md:py-4 text-xs sm:text-sm">Blueprint Dwelling</li>
                    </div>
                    
@@ -215,6 +215,18 @@ function prev(){
         showSlide()
     }
 }
+
+document.onkeydown = (e)=>{ switch(e.keyCode){
+    case 37: // left
+      prev();
+      break;
+      showSlide()
+    case 39: // right
+      next()
+      break;
+      showSlide()
+  }
+};
 
 function showSlide(){
     slides = document.getElementById('slider').getElementsByTagName('ol')
